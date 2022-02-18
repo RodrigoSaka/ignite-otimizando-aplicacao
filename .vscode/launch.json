@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run debug"
+    },
+    {
+      "name": "Client-side",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:8080"
+    },
+    {
+      "name": "Full stack",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}
